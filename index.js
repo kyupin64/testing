@@ -19,7 +19,7 @@ app.get("/*apple", (req, res) => {
 });
 
 app.get("/students?/:id", (req, res) => {
-    res.send(`student ${req.params.id}\n`);
+    res.send(`student ${process.env.STATUS} ${req.params.id}\n`);
 });
 
 app.post("/newStudent", (req, res) => {
